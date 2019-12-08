@@ -1,10 +1,12 @@
-module HeroQuery =
-  [%graphql {|
-{
-  hero @bsRecord {
-    name
-    height
-    mass
+module MyQuery =
+  [%graphql
+    {|
+  {
+    lists {
+      nullableOfNullable
+      nullableOfNonNullable
+      nonNullableOfNullable
+      nonNullableOfNonNullable
+    }
   }
-}
 |}]
