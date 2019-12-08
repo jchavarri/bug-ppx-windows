@@ -1,0 +1,16 @@
+parameters:
+  platform: "macOS"
+  vmImage: "macOS-10.13"
+
+jobs:
+  - job: ${{ parameters.platform }}
+    pool:
+      vmImage: ${{ parameters.vmImage }}
+      demands: node.js
+    timeoutInMinutes: 120 # This is mostly for Windows
+    steps: 
+      - template: utils/use-node.yml
+      - script: "npm install"
+        displayName: "npm install"
+      - script: "npm run build"
+        displayName: "npm run build"

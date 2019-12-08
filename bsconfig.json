@@ -1,0 +1,20 @@
+{
+  "name": "bug-ppx-windows",
+  "version": "0.1.0",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "ppx-flags": ["@ahrefs/bs-emotion-ppx/bin/bs-emotion-ppx"],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+  ],
+  "warnings": {
+    "error" : "+101"
+  },
+  "refmt": 3
+}
